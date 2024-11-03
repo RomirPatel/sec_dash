@@ -1,0 +1,57 @@
+/* Dashboard.css */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #121212; 
+}
+
+.sidebar {
+    transition: width 0.3s ease;
+}
+
+.nav-link {
+    transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.card {
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02); 
+}
+
+.card-header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); 
+}
+
+.card-body {
+    position: relative;
+}
+
+.card-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0.25rem;
+    z-index: 0;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+}
+
+.card-body:hover::before {
+    opacity: 1; 
+}
+
+.report-placeholder, .settings-placeholder {
+    text-align: center;
+    padding: 10px;
+    color: #cccccc;
+}
